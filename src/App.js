@@ -6,8 +6,11 @@ import Grocery from "./components/Lists/Grocery";
 import Contact from "./components/Routing/Contact";
 import Home from "./components/Routing/Home";
 import Error from "./components/Routing/Error";
-import LandingPage from "./components/Routing/LandingPage";
+import MainPage from "./components/StylingTutorial/MainPage";
+import landingpage1 from "./components/StylingTutorial/landingpage1";
+
 import Post from "./components/Routing/Post";
+import Header from "./components/StylingTutorial/Header";
 //import FruitBasket from "./components/Events/FruitBasket";
 //import Header from './components/Header';
 // import LandingPage from './components/LandingPage';
@@ -35,30 +38,35 @@ import Post from "./components/Routing/Post";
 // }
 function App(){
     return(
+      <div>
+        <landingpage1/>
+        <Header/>
+        <MainPage/>
+      </div>
      
-      <BrowserRouter>
-      {/* <nav>
-          <ul>
-            <li>
-              <Link to="/home">Go To Home</Link>
-            </li>
-            <li>
-              <Link to="/contactus">Contact Page</Link>
-            </li>
-            <li>
-              <Link to="/error">Error</Link>
-            </li>
-          </ul>
-      </nav> */}
+      // <BrowserRouter>
+      // {/* <nav>
+      //     <ul>
+      //       <li>
+      //         <Link to="/home">Go To Home</Link>
+      //       </li>
+      //       <li>
+      //         <Link to="/contactus">Contact Page</Link>
+      //       </li>
+      //       <li>
+      //         <Link to="/error">Error</Link>
+      //       </li>
+      //     </ul>
+      // </nav> */}
       
-      <Routes>
-          <Route exact path="/" element={<Home />}></Route>
-          <Route exact path="/home" element={<Home />}></Route>
-          <Route exact path="/contactus" element={<Contact />}></Route>
-          <Route exact path="blog/:id" element={<Post />}></Route>
-          <Route exact path="*" element={<Error></Error>}></Route>
-      </Routes>
-      </BrowserRouter>
+      // {/* <Routes>
+      //     <Route exact path="/" element={<Home />}></Route>
+      //     <Route exact path="/home" element={<Home />}></Route>
+      //     <Route exact path="/contactus" element={<Contact />}></Route>
+      //     <Route exact path="blog/:id" element={<Post />}></Route>
+      //     <Route exact path="*" element={<Error></Error>}></Route>
+      // </Routes>
+      // </BrowserRouter> */}
     
     );
 }
